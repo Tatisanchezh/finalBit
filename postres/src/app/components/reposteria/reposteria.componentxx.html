@@ -1,0 +1,82 @@
+<app-top></app-top>
+
+<main class="container1">
+  <div class="container2">
+    <form
+      #postForm="ngForm"
+      (ngSubmit)="handleSubmitPost(postForm)"
+      class="formulario"
+    >
+      <label for="name">Nombre del postre</label>
+      <input
+        class="name"
+        type="text"
+        aria-label=".form-control-lg example"
+        id="name"
+        name="name"
+        [(ngModel)]="homeService.selectedPost.name"
+      />
+      <label for="stock">¿Cuantos disponibles?</label>
+      <input
+        class="stock"
+        type="number"
+        aria-label="default input example"
+        id="stock"
+        name="stock"
+        [(ngModel)]="homeService.selectedPost.stock"
+      />
+      <label for="price">¿Precio de venta?</label>
+      <input
+        class="price"
+        type="number"
+        aria-label="default input example"
+        id="price"
+        name="price"
+        [(ngModel)]="homeService.selectedPost.price"
+      />
+      <!--<label for="tamanio">¿para cuantas personas?</label>
+      <input
+        class="tamanio"
+        type="number"
+        aria-label="default input example"
+        id="tamanio"
+        name="tamanio"
+        [(ngModel)]="homeService.selectedPost.tamanio"
+      />-->
+      <ng-container *ngIf="homeService.selectedPost._id; else create">
+        <button type="submit" class="btn btn-warning">Actualizar</button>
+      </ng-container>
+      <ng-template #create>
+        <button type="submit" class="btn btn-primary">Crear</button>
+      </ng-template>
+      <span class="mx-2"></span>
+    </form>
+  </div>
+</main>
+<div class="container3">
+  <div class="impresion">
+  <ul *ngFor="let post of homeService.posts">
+    <div>{{ post.name }}</div>
+    <div>{{ post.price }}</div>
+    <div>{{ post.stock }}</div>
+    <div>{{ post.tamanio }}</div>
+    <div class="d-flex gap-4">
+      <button
+        type="reset"
+        class="btn btn-primary"
+        (click)="resetForm(postForm)"
+      >
+        Modificar!
+      </button>
+      <button
+        type="button"
+        class="btn btn-info"
+        (click)="removePost(post._id)"
+      >
+        Delete
+      </button>
+    </div>
+  </ul>
+</div>
+</div>
+<app-footer></app-footer>

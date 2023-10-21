@@ -1,0 +1,68 @@
+
+
+.banner{
+height: 680px;
+width: 100%;
+background-color: rgba(31, 11, 49, 0.61);
+}
+    .imagen:hover{
+      border-radius:50%;
+      box-shadow: 0px 0px 15px 15px #7e1eec8a;
+      transform: rotate(360deg);
+      }
+      .seccion-oscura{
+      color: white ;
+      background-color: black;      
+      }
+
+      .nosotros{
+      height: 350px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;      
+      }
+
+      .tituloCracks{
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;   
+      color: #6e23c4a9;  
+      font-size: 50px;            
+      }
+
+      .tituloCracks1{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;   
+        color: #6e23c4a9;  
+        font-size: 70px;            
+        }
+      
+      .contenedor{
+      display: flex;
+      justify-content: center;      
+      }
+      .caja1{
+      height: 100px;
+      width: 50%;
+      }
+      .caja2{
+        height: 100px;
+        width: 50%;
+        }
+        .definicion{
+        margin-top: 15px;
+        }
+.titu2{
+display: flex;
+justify-content: center;
+margin-top: 15px;
+margin-bottom: 15px;
+}
+.inspo{
+display: flex;
+justify-content: space-evenly;
+}
+.segundoTop{
+display: flex;
+justify-content: space-evenly;
+margin-top: 20px;
+width: 100%;
+height: 380px;
+}
